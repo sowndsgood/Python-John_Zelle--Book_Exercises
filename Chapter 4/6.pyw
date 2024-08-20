@@ -1,0 +1,55 @@
+from graphics import *
+def main():
+    print("Graphical Interface")
+    win = GraphWin("Investment Chart", 320, 240)
+    win.setBackground("white")
+    prin_text = Text(Point(65, 50), 'Principal amount: ')
+    interest_text = Text(Point(55, 75), 'Interest rate:')
+    prin_text.draw(win)
+    interest_text.draw(win)
+    princ = Entry(Point(180, 50), 10)
+    interest = Entry(Point(160, 75), 8)
+    princ.setText('0.0')
+    princ.draw(win)
+    interest.setText('0')
+    interest.draw(win)
+    a = Text(Point(150, 160), 'Visualise Future Value').draw(win)
+    b = Rectangle(Point(50, 150), Point(280, 180)).draw(win)
+    point = win.getMouse()
+    principal = float(princ.getText())
+    apr = float(interest.getText())
+    prin_text.undraw()
+    interest_text.undraw()
+    interest.undraw()
+    princ.undraw()
+    a.undraw()
+    b.undraw()
+    x = point.getX()
+    y = point.getY()
+    print(principal, apr)
+    if (x in range(320)) and (y in range(240)):
+        Text(Point(20, 230), ' 0.0k').draw(win)
+        Text(Point(20, 180), ' 2.5k').draw(win)
+        Text(Point(20, 130), ' 5.0k').draw(win)
+        Text(Point(20, 80), ' 7.5k').draw(win)
+        Text(Point(20, 30), '10.0k').draw(win)
+        height = principal * 0.02
+        rect = Rectangle(Point(40, 230), Point(65, 230 - height))
+        rect.setFill("red")
+        rect.setWidth(2)
+        rect.draw(win)
+        
+        for year in range(1,11):
+            principal = principal * (1 + apr / 100)
+            xaxis1 = (25 * year + 40)
+            height = principal * 0.02
+            bar = Rectangle(Point(xaxis1, 230), Point(xaxis1 + 25, 230 - height))
+            bar.setFill("red")
+            bar.setWidth(2)
+            bar.draw(win)
+
+        input("Press Enter key")
+        win.close()
+main()
+
+    
