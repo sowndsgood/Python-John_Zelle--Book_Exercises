@@ -22,7 +22,7 @@ This repository contains solutions to exercises from the book **"Python Programm
 
 3. **Run the Exercises**
 
-  You can run the Python scripts using Python 3. For example:
+   You can run the Python scripts using Python 3. For example:
   
    ```bash
    python exercise1.py
