@@ -14,3 +14,17 @@ This repository contains solutions to exercises from the book **"Python Programm
    
    ```bash
    git clone https://github.com/yourusername/your-repo.git
+
+2. **Navigate to the Exercises**
+
+   ```bash
+   cd your-repo
+
+3. **Run the Exercises**
+
+  You can run the Python scripts using Python 3. For example:
+  
+   ```bash
+   python exercise1.py
+
+   
