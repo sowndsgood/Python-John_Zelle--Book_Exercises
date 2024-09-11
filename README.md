@@ -1,22 +1,17 @@
 # Python Programming: An Introduction to Computer Science - Exercises
-#### Overview
-This repository contains solutions to exercises from the book "Python Programming: An Introduction to Computer Science" by John Zelle. The exercises cover a wide range of topics from basic Python programming to more advanced concepts.
 
-Getting Started
-Clone the Repository
+## Overview
 
-bash
-Copy code
-git clone https://github.com/yourusername/your-repo.git
-Navigate to the Exercises
+This repository contains solutions to exercises from the book **"Python Programming: An Introduction to Computer Science"** by John Zelle. The exercises cover a wide range of topics from basic Python programming to more advanced concepts.
 
-bash
-Copy code
-cd your-repo
-Run the Exercises
+## Structure
 
-You can run the Python scripts using Python 3. For example:
+- **Exercises**: Each exercise is placed in a separate file or directory named according to the exercise number or topic.
+- **Documentation**: Additional documentation or explanations for each exercise may be included within the corresponding file.
 
-bash
-Copy code
-python exercise1.py
+## Getting Started
+
+1. **Clone the Repository**
+   
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
