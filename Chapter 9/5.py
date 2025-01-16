@@ -5,7 +5,7 @@ from random import random
 
 #printing introduction
 def printIntro()->None:
-    print('This program simulates a game of Volleyball and copmares with Rally Scoring. ')
+    print('This program simulates a game of Volleyball and compares with Rally Scoring. ')
     print("The ability of each team is indicated by a probability (a number between 0 and 1) that the team wins the point when serving.") 
 
 #getting inputs from user
