@@ -1,0 +1,3 @@
+Name                Hours     Points    GPA       
+sow               10.0      30.0     3.000
+son               20.0      50.0     2.500
