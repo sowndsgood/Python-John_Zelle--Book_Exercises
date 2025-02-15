@@ -20,12 +20,55 @@ def index (myList , x):
             return i
     return ValueError
 
+'''
 def reverse(myList):
-    '''Reverses the list'''
+    "Reverses the list"
     new=[]
     for i in range(len(myList)-1,-1,-1):
         new.append(myList[i])
-    myList=new
+    return new
+'''
 
-def sort (myList):
-    
+def reverse(myList):
+    "Reverses the list in place"
+    start=0
+    end=len(myList)-1
+    while start<end:
+        myList[start],myList[end]=myList[end],myList[start]
+        start+=1
+        end-=1
+
+def sort(myList):
+    '''Sorts the list in ascending order in place using Selection Sort'''
+    n=len(myList)
+    for i in range(n-1):
+        min=i
+        for j in range(i,n):
+            if myList[j]<myList[i]:
+                min=j
+        myList[i],myList[min]=myList[min],myList[i]
+
+def sel_sort(arr):
+    n = len(arr)
+    for i in range(n-1):
+        min = i
+        for j in range(i, n):
+            if arr[j] < arr[min]:
+                min = j
+        arr[i], arr[min] = arr[min], arr[i]
+
+myList=[8,6,5,7,4,2]
+print("Original List:",myList)
+print(f"Count of 2:{count (myList , 2)}")
+print(f"Is 8 in list:",isin(myList, 8))
+print(f"Index of 2:",index (myList , 2))
+reverse(myList)
+print("Reversed List:",myList)
+sort(myList)
+print("Sorted List:",myList)
+
+
+
+
+
+   
