@@ -2,7 +2,7 @@
 
 class Card:
     def __init__(self, rank, suit):
-        self.rank = int(rank)  # Ensure rank is stored as an integer
+        self.rank = int(rank)  
         self.suit = suit
 
     def getRank(self):
@@ -21,21 +21,21 @@ class Card:
 
 def RoyalFlush(cards):
     '''10, Jack, Queen, King, Ace, all of the same suit.'''
-    suits = [card.getSuit() for card in cards]
-    ranks = sorted([card.getRank() for card in cards])
-    return ranks == [1, 10, 11, 12, 13] and all(suit == suits[0] for suit in suits)
+    suits=[card.getSuit() for card in cards]
+    ranks=sorted([card.getRank() for card in cards])
+    return ranks==[1,10,11,12,13] and all(suit==suits[0] for suit in suits)
 
 def StraightFlush(cards):
     '''Five ranks in a row, all of the same suit.'''
-    suits = [card.getSuit() for card in cards]
-    ranks = sorted([card.getRank() for card in cards])
-    return all(suit == suits[0] for suit in suits) and ranks == list(range(ranks[0], ranks[0] + 5))
+    suits=[card.getSuit() for card in cards]
+    ranks=sorted([card.getRank() for card in cards])
+    return ranks==list(range(ranks[0],ranks[0]+5)) and all(suit==suits[0] for suit in suits)
 
 def FourofKind(cards):
     '''Four of the same rank.'''
-    ranks = [card.getRank() for card in cards]
-    rank_counts = {rank: ranks.count(rank) for rank in ranks}
-    return 4 in rank_counts.values()
+    ranks=[card.getRank() for card in cards]
+    rank_count={rank:ranks.count(rank) for rank in ranks}
+    return 4 in rank_count.values()
 
 def FullHouse(cards):
     '''Three of one rank and two of another.'''
@@ -80,20 +80,20 @@ def checkXHigh(cards):
 
 def main():
     '''Reads the card data and determines the poker hand category.'''
+    
+    infile = open("ex14_input.txt", 'r')
 
-    # Read input file containing cards
-    with open("ex14_input.txt", 'r') as infile:
-        cards = [Card(rank, suit) for rank, suit in (line.split() for line in infile)]
+    cards = []  
+    for line in infile:
+        rank, suit = line.strip().split()  
+        cards.append(Card(int(rank), suit)) 
 
-    # Sort first by rank, then by suit
     cards.sort(key=Card.getRank)
     cards.sort(key=Card.getSuit)
 
-    # Display the sorted cards
     for card in cards:
         print(card)
 
-    # Determine and print the hand category
     if RoyalFlush(cards):
         print("Category: Royal Flush")
     elif StraightFlush(cards):

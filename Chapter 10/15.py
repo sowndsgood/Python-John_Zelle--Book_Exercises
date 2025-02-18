@@ -28,8 +28,6 @@ class Projectile:
         """Returns the Y position of object."""
         return self.ypos
 
-
-
 class shotTracker:
     """Creates a object for circle representing the cannonball with its properties.
     """
@@ -63,8 +61,6 @@ class shotTracker:
     def undraw(self):
         """Undraws the cannonball"""
         self.marker.undraw()
-
-
 
 class Button:
     '''A button is a labeled triangle in a window.
@@ -113,8 +109,6 @@ class Button:
         self.label.setFill('darkgrey')
         self.rect.setWidth(1)
         self.active = False
-
-
 
 class inputDialog:
     """This class is for input Dialog box where we can give initial angle, velocity and height of cannonball """
@@ -167,7 +161,6 @@ class inputDialog:
         """Closes the input dialog window"""
         self.win.close()
 
-
 def main()->None:
 
     win = GraphWin("Cannonball simulation", 1000, 600, autoflush=False)
@@ -197,8 +190,6 @@ def main()->None:
         while -10 <= shot.getX() <= 210 and 0<= shot.getY():
             shot.update(1/50)
             update(50)  
-
-
         
     win.close()
 
