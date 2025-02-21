@@ -27,4 +27,18 @@ This repository contains solutions to exercises from the book **"Python Programm
    ```bash
    python exercise1.py
 
+## Chapters
    
+- **Chapter 1 Computers and Programs**
+- **Chapter 2 Writing Simple Programs**
+- **Chapter 3 Computing with Numbers**
+- **Chapter 4 Objects and Graphics**
+- **Chapter 5 Sequences: Strings, Lists, and Files**
+- **Chapter 6 Defining Functions**
+- **Chapter 7 Decision Structures**
+- **Chapter 8 Loop Structures and Booleans**
+- **Chapter 9 Simulation and Design**
+- **Chapter 10 Defining Classes**
+- **Chapter 11 Data Collections**
+- **Chapter 12 Object-Oriented Design**
+- **Chapter 13 Algorithm Design and Recursion**
